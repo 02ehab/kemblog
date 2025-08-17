@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مدونة Kemblog</title>
+  <link rel="stylesheet" href="kemblog.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">Kemblog</div>
+  <button class="menu-toggle" onclick="openMenu()">☰</button>
+
+  <!-- القائمة الأفقية (للكمبيوتر) -->
+  <nav class="main-nav">
+    <a href="index.html">الرئيسية</a>
+    <a href="about.html">من نحن </a>
+  </nav>
+
+  <!-- القائمة الجانبية (للموبايل) -->
+  <div id="sideMenu" class="side-menu">
+    <button class="close-btn" onclick="closeMenu()">✖</button>
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="about.html">من نحن </a>
+    </nav>
+  </div>
+</header>
+
+
+<main>
+  <!-- الهيرو -->
+  <section class="hero">
+    <div class="posts-grid">
+
+      <div class="post-card">
+        <img src="home.jpg" alt="صورة البوست">
+        <div class="post-content">
+          <h2>عنوان البوست 1</h2>
+          <p onclick="window.location.href='article_view.html?id=1'">
+            هذا وصف مختصر للبوست 1... اضغط هنا لعرض المزيد.
+          </p>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <img src="home.jpg" alt="صورة البوست">
+        <div class="post-content">
+          <h2>عنوان البوست 2</h2>
+          <p onclick="window.location.href='article_view.html?id=2'">
+            هذا وصف مختصر للبوست 2... اضغط هنا لعرض المزيد.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+
+   <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+        <ul class="footer-links">
+            <li><a href="privacy.html">سياسة الخصوصية</a></li>
+            <li><a href="faq.html">الأسئلة الشائعة</a></li>
+            <li><a href="index.html">منصة كيم </a></li>
+            <li><a href="terms.html">الشروط والأحكام</a></li>
+        </ul>
+        <p class="footer-copy">© 2025 Kemstay. جميع الحقوق محفوظة.</p>
+    </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script type="module" src="supabase.js"></script>
+<script type="module" src="kemblog.js"></script>
+
+</body>
+</html>
